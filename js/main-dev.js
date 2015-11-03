@@ -35,7 +35,7 @@
     wArea = wWidth * wHeight;
 
     // calculate nodes needed
-    nodes.length = Math.sqrt(wArea) / 20 | 0;
+    nodes.length = Math.sqrt(wArea) / 30 | 0;
 
     // set canvas size
     canvas.width = wWidth;
@@ -116,23 +116,23 @@
         };
 
         // calculate gravity force
-        force = 8 * nodeA.m * nodeB.m / Math.pow(distance, 2);
+        force = 3 * nodeA.m * nodeB.m / Math.pow(distance, 2);
         //Default: force = 8 * nodeA.m * nodeB.m / Math.pow(distance, 2);
 
-        if (force > 0.025) {
-          // cap force to a maximum value of 0.025
-          force = 0.025;
+        if (force > 0.010) {
+          // cap force to a maximum value of (default) 0.025
+          force = 0.010;
         }
 
         // draw gravity lines
         ctx.beginPath();
-        ctx.strokeStyle = 'rgba(225,225,225,' + force * 40 + ')';
+        ctx.strokeStyle = 'rgba(225,225,225,' + (force+3) * 50 + ')';
         ctx.moveTo(nodeA.x, nodeA.y);
         ctx.lineTo(nodeB.x, nodeB.y);
         ctx.stroke();
 
-        xForce = force * direction.x;
-        yForce = force * direction.y;
+        xForce = force * direction.x / 2;
+        yForce = force * direction.y / 2;
 
         // calculate new velocity after gravity
         if (nodeA.pos !== nodeB.pos) {
@@ -153,7 +153,7 @@
     // update nodes
     for (i = 0, len = nodes.length; i < len; i++) {
       ctx.beginPath();
-      ctx.arc(nodes[i].x, nodes[i].y, nodes[i].m, 0, 2 * Math.PI);
+      ctx.arc(nodes[i].x, nodes[i].y, nodes[i].m*1.7, 0, 2 * Math.PI);
       ctx.fillStyle="#EFEFEF";
       ctx.fill();
 
