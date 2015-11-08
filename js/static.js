@@ -5,6 +5,7 @@ var pixelRatio = window.devicePixelRatio;
 var wWidth;
 var wHeight;
 var wArea;
+var scaledLineWeight;
 
 var nodes = new Array(Math.sqrt(wArea) / 10 | 0);
 
@@ -12,10 +13,14 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 //var $container = document.getElementById('node-garden');
 
-if (pixelRatio !== 1) {
-  // if retina screen, scale canvas
-  canvas.style.transform = 'scale(' + 1 / pixelRatio + ')';
-  canvas.style.transformOrigin = '0 0';
+if(pixelRatio !== 1) {
+    // if retina screen, scale canvas
+    canvas.style.transform = 'scale(' + 1 / pixelRatio + ')';
+    canvas.style.transformOrigin = '0 0';
+    scaledLineWeight=2;
+}
+else{
+    scaledLineWeight=1;
 }
 canvas.id = 'nodegarden';
 
@@ -34,7 +39,7 @@ function res() {
 function init () {
     wWidth = window.innerWidth * pixelRatio;
     wHeight = window.innerHeight * pixelRatio;
-    wArea = wWidth * wHeight;
+    wArea = wWidth * (wHeight/2);
 
     // calculate nodes needed
     nodes.length = Math.sqrt(wArea) / 5 | 0;
@@ -45,12 +50,12 @@ function init () {
     // create nodes
     var i, len;
     for (i = 0, len = nodes.length; i < len; i++) {
-        if (nodes[i]) {
-            continue;
-        }
-    nodes[i] = {
+        //if (nodes[i]) {
+        //    continue;
+        //}
+        nodes[i] = {
         x: Math.random() * wWidth,
-        y: Math.random() * wHeight,
+        y: Math.random() * wHeight/2,
         vx: Math.random() * 1 - 0.5,
         vy: Math.random() * 1 - 0.5,
         m: Math.random() * 1.5 + 1,
@@ -126,7 +131,7 @@ function render () {
             // draw gravity lines
             ctx.beginPath();
             ctx.strokeStyle = 'rgba(225,225,225,' + force * 50 + ')';
-            ctx.lineWidth = 3;
+            ctx.lineWidth = scaledLineWeight;
             ctx.moveTo(nodeA.x, nodeA.y);
             ctx.lineTo(nodeB.x, nodeB.y);
             ctx.stroke();

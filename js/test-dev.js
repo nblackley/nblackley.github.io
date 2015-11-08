@@ -5,10 +5,11 @@ var pixelRatio = window.devicePixelRatio;
 var wWidth;
 var wHeight;
 var wArea;
+var scaledLineWeight;
 
 var nodes = new Array(Math.sqrt(wArea) / 10 | 0);
 
-var canvas = document.getElementById("node-garden");
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 //var $container = document.getElementById('node-garden');
 
@@ -16,6 +17,10 @@ if (pixelRatio !== 1) {
     // if retina screen, scale canvas
     canvas.style.transform = 'scale(' + 1 / pixelRatio + ')';
     canvas.style.transformOrigin = '0 0';
+    scaledLineWeight=2;
+}
+else{
+    scaledLineWeight=1;
 }
 canvas.id = 'nodegarden';
 
@@ -29,7 +34,7 @@ window.addEventListener('resize', init);
 function init() {
     wWidth = window.innerWidth * pixelRatio;
     wHeight = window.innerHeight * pixelRatio;
-    wArea = wWidth * wHeight;
+    wArea = wWidth * (wHeight/2);
 
     // calculate nodes needed
     nodes.length = Math.sqrt(wArea) / 5 | 0;
@@ -111,7 +116,7 @@ function render() {
         }
 
         // calculate gravity force
-        force = (10 * nodeA.m * nodeB.m) / Math.pow(distance, 2);
+        force = (12 * nodeA.m * nodeB.m) / Math.pow(distance, 2);
 
         if (force > 0.025) {
             // cap force to a maximum value of 0.025
@@ -121,6 +126,7 @@ function render() {
         // draw gravity lines
         ctx.beginPath();
         ctx.strokeStyle = 'rgba(225,225,225,' + force * 40 + ')';
+        ctx.lineWidth = scaledLineWeight;
         ctx.moveTo(nodeA.x, nodeA.y);
         ctx.lineTo(nodeB.x, nodeB.y);
         ctx.stroke();
@@ -155,10 +161,10 @@ function render() {
         nodes[i].x += nodes[i].vx;
         nodes[i].y += nodes[i].vy;
 
-        if (nodes[i].x > wWidth + 25 || nodes[i].x < -25 || nodes[i].y > wHeight + 25 || nodes[i].y < -25) {
+        if (nodes[i].x > wWidth + 25 || nodes[i].x < -25 || nodes[i].y > wHeight/2 + 25 || nodes[i].y < -25) {
             // if node over screen limits - reset to a init position
             nodes[i].x = Math.random() * wWidth;
-            nodes[i].y = Math.random() * wHeight;
+            nodes[i].y = Math.random() * wHeight/2;
             nodes[i].vx = Math.random() * 1 - 0.5;
             nodes[i].vy = Math.random() * 1 - 0.5;
         }
