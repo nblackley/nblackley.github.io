@@ -9,25 +9,10 @@
     <!-- font-family: 'Open Sans', sans-serif; -->
 </head>
 <body>
-    <div id="banner">
+    <div class="banner">
         <a href="https://www.facebook.com/events/1706603569628587/"><img src="assets/imgs/30%20Day%20Challenge%20Banner.png" height="250">
         </a>
     </div>
-    <div id="hero">
-        <div id="lines">
-            <svg class="line" height=400 width=100%>
-                <line x1="0" y1=20% x2=100% y2=20% style="stroke:#fafbfb ; stroke-width:7" />
-            </svg>
-            <svg class="line" height=400 width=100%>
-                <line x1="0" y1=50% x2=100% y2=50% style="stroke:#fafbfb ; stroke-width:7" />
-            </svg>
-            <svg class="line" height=400 width=100%>
-                <line x1="0" y1=80% x2=100% y2=80% style="stroke:#fafbfb ; stroke-width:7" />
-            </svg>
-        </div>
-        <img id="headshot" src="assets/imgs/Half%20Poly%20Face%20Circle.png" height=400>
-    </div>
-    <!--
     <div class="navbar">
         <h1>Nick Blackley</h1>
         <div class=icons>
@@ -46,6 +31,5 @@
         <h1 class="name">Nick Blackley</h1>
         <h3>Under Construction</h3>
     </div>
-    -->
 </body>
 </html>
