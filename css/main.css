@@ -16,27 +16,32 @@ html, body{
 }
 #hero{
     position: absolute;
-    top: 120px;
+    top: 75px;
     width: 100%;
     height: 400px;
     text-align: center;
+}
+#hero, h1{
+    position: relative;
+    font-family: 'Lobster';
+    font-size: 175%;
 }
 #headshot{
     position: relative;
     z-index: 1;
 }
-#lines{
+#accents{
     position: absolute;
     width: inherit;
     height: inherit;
     z-index: 0;
 }
-.line{
+#accents, svg{
     position: absolute;
     top: 0;
     left: 0;
-    height: auto;
-    
+    height: inherit;
+    width: inherit;
 }
 .navbar{
     position: fixed;
