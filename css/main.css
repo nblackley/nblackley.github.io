@@ -38,9 +38,30 @@ html, body{
 #description, h2{
     font-size: 5vw;
 }
+#card-table{
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+.idk{
+    margin: auto;
+    display: table;
+}
+.workaround{
+    width: 58.3%;
+    margin: auto;
+}
+#card-table, img{
+    width: 100%;
+}
+@media (min-width: 600px){
+.workaround{
+    width: 350px;
+}
+}
 @media (min-width: 800px){
 #banner{
-    position: absolute;
+    position: fixed;
     z-index: 10;
     width: 250px;
     height: 250px;
@@ -65,7 +86,14 @@ html, body{
     text-align: center;
     font-size: 150%;
 }
+.workaround{
+    width: 705px;
 }
+#card-table, img{
+    width: 350px;
+}
+}
+    
 /*#accents{
     position: absolute;
     width: 100%;
