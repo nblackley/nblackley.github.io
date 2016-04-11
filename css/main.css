@@ -36,7 +36,7 @@ html, body{
     text-align: center;
 }
 #description, h2{
-    font-size: 150%;
+    font-size: 5vw;
 }
 @media (min-width: 800px){
 #banner{
@@ -60,6 +60,10 @@ html, body{
     font-family: 'Lobster';
     font-size: 190%;
     text-align: center;
+}
+#description{
+    text-align: center;
+    font-size: 1.5em;
 }
 }
 /*#accents{
