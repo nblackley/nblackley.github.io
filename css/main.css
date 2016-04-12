@@ -14,20 +14,21 @@ html, body{
     position: fixed;
     z-index: 10;
     width: 31.25%;
+    max-width: 250px;
 }
 #hero{
-    padding-top: 9%;
+    padding-top: 5%;
     width: 100%;
     height: auto;
 }
-
 #headshot{
     margin-left: auto;
     margin-right: auto;
     display: block;
     width: 50%;
+    max-width: 400px;
 }
-#hero, h1{
+#hero h1{
     font-family: 'Lobster';
     font-size: 7vw;
     text-align: center;
@@ -35,71 +36,65 @@ html, body{
 #description{
     text-align: center;
 }
-#description, h2{
+#description h2{
     font-size: 5vw;
 }
 #card-table{
+    padding-top: 3%
+}
+.row{
     position: relative;
-    width: 100%;
+    max-width: 350px;
     margin: auto;
 }
-.idk{
-    margin: auto;
-    display: table;
-}
-.workaround{
-    width: 58.3%;
-    margin: auto;
-}
-#card-table, img{
-    width: 100%;
-}
-@media (min-width: 600px){
-.workaround{
+.cell{
     width: 350px;
+    height: 490px;
+    text-align: center;
+    background-image: url(/assets/imgs/Card.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.content{
+    padding-top: 4%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.content p, .content h2{
+    color: #444d53;
+    padding-bottom: 2%;
+}
+@media (min-width: 700px){
+.row{
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+}
+.cell{
+    display: table-cell;
+    width: 350px;
+    height: 490px;
+    text-align: center;
+    background-image: url(/assets/imgs/Card.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 }
 @media (min-width: 800px){
-#banner{
-    position: fixed;
-    z-index: 10;
-    width: 250px;
-    height: 250px;
-}
 #hero{
-    padding-top: 72px;
+    padding-top: 40px;
     width: 100%;
     height: auto;
 }
-#headshot{
-    position: relative;
-    margin: auto;
-    display: block;
-    width: 400px;
 }
-#hero, h1{
+@media (min-width:650px){
+#hero h1{
     font-family: 'Lobster';
-    font-size: 190%;
+    font-size: 300%;
     text-align: center;
 }
-#description, h2{
+#description h2{
     text-align: center;
-    font-size: 150%;
-}
-.workaround{
-    width: 705px;
-}
-#card-table, img{
-    width: 350px;
+    font-size: 200%;
 }
 }
-    
-/*#accents{
-    position: absolute;
-    width: 100%;
-    z-index: 0;
-}
-#accents, svg{
-    position: relative;
-    width: 100%;
-}*/
