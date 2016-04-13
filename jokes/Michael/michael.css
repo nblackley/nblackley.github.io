@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    color: #fafbfb;
+}
+html, body{
+    height: 100%;
+    background-image: url(IMG_1354.jpeg);
+}
+h1{
+    text-align: center;
+    padding-top: 9%;
+    font-family: 'Times';
+    color:whitesmoke;
+    font-size: 5vw;
+    font-weight: bold;
+}
+#row{
+    padding-top: 1%;
+    position: relative;
+    width: 50%;
+    margin: auto;
+}

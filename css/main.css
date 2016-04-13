@@ -39,6 +39,9 @@ html, body{
 #description h2{
     font-size: 5vw;
 }
+#description h3{
+    font-size: 3.5vw;
+}
 #card-table{
     padding-top: 3%
 }
@@ -57,12 +60,19 @@ html, body{
 }
 .content{
     padding-top: 4%;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 11%;
+    padding-right: 11%;
 }
 .content p, .content h2{
     color: #444d53;
     padding-bottom: 2%;
+}
+.content p{
+    text-align: left;
+}
+.content a{
+    color: #FFAF94;
+    font-weight: bold;
 }
 @media (min-width: 700px){
 .row{
@@ -79,6 +89,12 @@ html, body{
     background-size: cover;
     background-repeat: no-repeat;
 }
+}
+#footer{
+    text-align: center;
+}
+#footer a:link{
+    text-decoration: none;
 }
 @media (min-width: 800px){
 #hero{
@@ -97,4 +113,7 @@ html, body{
     text-align: center;
     font-size: 200%;
 }
+#description h3{
+    text-align: center;
+    font-size: 150%;
 }

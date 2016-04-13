@@ -1,0 +1,29 @@
+*{
+    margin:0;
+    padding:0;
+    color: whitesmoke;
+}
+html, body{
+    height: 100%;
+    background-image: url("Very-Large.jpg");
+    background-size: cover;
+}
+h1{
+    text-align: center;
+    padding-top: 15%;
+    font-size: 5vw;
+    padding-bottom: 2%;
+}
+div{
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+input, button{
+    color: black;
+}
+#invalid{
+    text-align: center;
+    color: red;
+    padding-top: 1%;
+}
