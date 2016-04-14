@@ -74,6 +74,21 @@ html, body{
     color: #FFAF94;
     font-weight: bold;
 }
+#footer{
+    text-align: center;
+}
+#footer a:link{
+    text-decoration: none;
+}
+#icon-tray{
+    text-align: center;
+    font-size: 4.5vw;
+}
+#icon-tray a:link{
+    text-decoration: none;
+    padding-left: 3%;
+    padding-right: 3%;
+}
 @media (min-width: 700px){
 .row{
     position: relative;
@@ -89,12 +104,6 @@ html, body{
     background-size: cover;
     background-repeat: no-repeat;
 }
-}
-#footer{
-    text-align: center;
-}
-#footer a:link{
-    text-decoration: none;
 }
 @media (min-width: 800px){
 #hero{

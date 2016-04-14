@@ -16,7 +16,7 @@
     <h3 id="invalid"></h3>
     <script>
     function redirect(){
-        var input=document.getElementById("input").value;
+        var input=document.getElementById("input").value.toLowerCase();
         var redirect="";
         switch(input){
             case "megan":
@@ -30,6 +30,9 @@
                 break;
             case "michael":
                 redirect="/jokes/Michael/michael.html"
+                break;
+            case "call me":
+                redirect="http://hayleycall.me"
                 break;
             default:
                 document.getElementById("invalid").innerHTML = "I can't find where that is.";
