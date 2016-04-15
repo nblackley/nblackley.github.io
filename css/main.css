@@ -89,6 +89,21 @@ html, body{
     padding-left: 3%;
     padding-right: 3%;
 }
+@media (max-width: 500px){
+#hero h1{
+    font-family: 'Lobster';
+    font-size: 200%;
+    text-align: center;
+}
+#description h2{
+    text-align: center;
+    font-size: 150%;
+}
+#description h3{
+    text-align: center;
+    font-size: 125%;
+}
+}
 @media (min-width: 700px){
 .row{
     position: relative;
