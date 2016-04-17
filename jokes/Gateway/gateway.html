@@ -8,12 +8,15 @@
     <link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <h1>Where are we going?</h1>
-    <div>
-        <input id="input" type="text" autocomplete="off">
-        <button id="go" onclick="redirect()">Depart</button>
+    <div id="spaceship">
+        <h1>Where are we going?</h1>
+        <div>
+            <input id="input" type="text" autocomplete="off">
+            <button id="go" onclick="redirect()">Depart</button>
+        </div>
+        <h3 id="invalid"></h3>
     </div>
-    <h3 id="invalid"></h3>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
     function redirect(){
         var input=document.getElementById("input").value.toLowerCase();
@@ -37,6 +40,11 @@
             case "lucifer":
                 redirect="http://www.lucymaude.com"
                 break;
+            case "space":
+                document.getElementById("spaceship").animation({
+                    top: "100px"
+                },100);
+                break;
             default:
                 document.getElementById("invalid").innerHTML = "I can't find where that is.";
         }
@@ -45,28 +53,5 @@
         }
     }
     </script>
-    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"  type="text/javascript"></script>
-    <script src="stargate.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function () {
-        $('#go').keydown(function(e) {
-            alert("hi");
-            var input=($('#input').val();
-            var redirect="";
-            if(e.which === 13) {
-                switch(input){
-                    case "megan":
-                        redirect="http://megan.tech"
-                        break;
-                    default:
-                        document.getElementById("invalid").innerHTML = "I can't find where that is.";
-                }
-                if(redirect!=""){
-                    window.location=redirect;
-                }
-            }
-        )}
-    )}
-    </script>-->
 </body>
 </html>
