@@ -6,6 +6,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="gateway.css">
     <link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+    </script>
 </head>
 <body>
     <div id="spaceship">
@@ -40,9 +42,7 @@
                 redirect="http://www.lucymaude.com"
                 break;
             case "space":
-                document.getElementById("spaceship").animation({
-                    top: "100px"
-                },100);
+                $("#spaceship").animate({top: "100%"},10000);
                 break;
             default:
                 document.getElementById("invalid").innerHTML = "I can't find where that is.";
@@ -50,6 +50,8 @@
         if(redirect!=""){
             window.location=redirect;
         }
+    }
+    function blastoff(){
     }
     </script>
 </body>
