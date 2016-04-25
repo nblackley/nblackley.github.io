@@ -41,6 +41,14 @@ html, body{
     font-size: 7vw;
     text-align: center;
 }
+#birthday-hat{
+    position: absolute;
+    top: 0%;
+    left: 51.5%;
+    width: 13.75%;
+    max-width: 110px;
+    visibility: hidden;
+}
 #description{
     text-align: center;
 }
