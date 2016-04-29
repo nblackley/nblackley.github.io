@@ -1,0 +1,53 @@
+/* Pallete
+Light Grey: fdfdfc
+Normal Gray: D6D2C4
+Dark Gray: 382F2D
+-------
+Dark Blue: 333F48
+Normal Blue: 005F86
+-------
+Green: 43695B
+-------
+Yellow: F2A900
+*/
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+    color: #382F2D;
+}
+html{
+    background-color: #fdfdfc;
+}
+#upper-background{
+    background-color: #D6D2C4;
+    height: 70%;
+    width: 100%;
+    position: absolute;
+}
+#hero{
+    width: 100%;
+    max-width: 850px;
+    position: absolute;
+    top: 23%;
+    right: 10px;
+}
+#badge{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    padding-top: 4%;
+    padding-left: 4%;
+    display: table;
+}
+#badge img{
+    width: 12%;
+    display: inline-block;
+}
+#badge div{
+    display: inline-block;
+}
+#header{
+    
+}
