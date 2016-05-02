@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>its dat boi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="/jokes/datboi/datboi.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+    <iframe id="datboi" src="https://www.youtube.com/embed/nytzHVEHLLs?autoplay=1&loop=1&playlist=nytzHVEHLLs&controls=0&playsinline=0" frameborder="0" onload="Init()"></iframe>
+    <script>
+        var time
+        var output
+
+        function Init(){
+            time = 1;
+            document.getElementById("datboi").style.height=Math.floor(window.innerHeight*.85)+"px";
+            StartTimer();
+        }
+
+        function convertOutput(){
+            var hours = 0
+            var mins = 0
+            var secs = time
+
+            while(secs >= 60){
+                secs -= 60;
+                mins += 1;
+            }
+
+            if(secs < 10){
+                secs = "0" + secs;
+            }
+
+            while(mins >= 60){
+                mins -= 60;
+                hours += 1;
+            }
+
+            if(mins < 10){
+                mins = "0" + mins;
+            }
+
+            output = hours + ":" + mins + ":" + secs;
+        }
+
+        function StartTimer(){
+            time += 1;
+            convertOutput();
+            document.getElementById("timer").innerHTML = "Oh shit waddup: " + output;
+            self.setTimeout("StartTimer()", 1000);
+        }
+    </script>
+    <h3 id="timer"></h3>
+</body>

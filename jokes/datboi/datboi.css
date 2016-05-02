@@ -1,0 +1,12 @@
+*{
+    background-color: black;
+    color: red;
+}
+iframe{
+    width: 100%;
+    pointer-events: none;
+}
+#timer{
+    width: 100%;
+    text-align: center;
+}

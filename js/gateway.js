@@ -32,6 +32,8 @@ function redirect(){
             case "west":
                 redirect="http://kanyewest.com"
                 break;
+            case "oh shit waddup":
+                redirect="/jokes/datboi/datboi.html"
             default:
                 document.getElementById("invalid").innerHTML = "I can't find where that is.";
         }
