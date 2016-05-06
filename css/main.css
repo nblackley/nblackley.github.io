@@ -24,6 +24,16 @@ html, body{
     width: 30%;
     max-width: 225px;
 }
+#ididit{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    top: 5%;
+    text-align: center;
+    font-family: 'Lobster';
+    color: #f52c1a;
+    font-size: 10vw;
+}
 #hero{
     padding-top: 5%;
     width: 100%;
